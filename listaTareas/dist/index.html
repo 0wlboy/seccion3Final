@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  <!--- tipografia--->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Lista de Tareas</title>
+</head>
+<body class="bg-gradient-to-r from-violet-500 to-purple-500">
+  <main class="relative flex flex-col items-center justify-center mt-32 mx-32">
+      <div class="bg-purple-500 p-8 border-solid border-2 border-purple-700 rounded-xl flex gap-20">
+        <div class="text-white">
+          <h1 class="lg:text-3xl text-2xl aleoTitle">Lista de Tareas</h1>
+          <button id="showWindow" type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 font-medium rounded-lg text-sm aleoSub px-5 py-1.5 my-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Añadir</button>
+        </div>
+        <div>
+          <p id="numbers" class="bg-violet-700 text-white flex items-center justify-center text-xl font-bold w-28 h-28 rounded-full">0/0</p>
+        </div>
+      </div>
+    <!--addTask-->
+    <div id='addTask' class="bg-white/30 backdrop-blur-lg fixed z-40 overflow-y-auto p-8 md:w-2/5 w-3/4 top-24 border-solid border-2 border-purple-700 rounded-xl flex gap-20" style="display:none ;">
+      <div class="w-full">
+        <div type="button" id='exit' class='fixed top-0 left-0 p-1 bg-red-500 rounded-br-lg cursor-pointer hover:bg-red-600 focus:ring-4 focus:ring-red-300'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5 12l14 0" />
+            <path d="M5 12l6 6" />
+            <path d="M5 12l6 -6" />
+          </svg>
+        </div>
+        <form class="flex flex-col gap-4">
+            <input type="text" id="title" class="bg-violet-950 border border-purple-300 text-gray-300 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5" placeholder="Introduce una tarea" required />
+            <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-300 bg-violet-950 rounded-lg border border-purple-300 focus:ring-purple-500 focus:border-purple-500" placeholder="Introduce una descripcion"></textarea>
+            <button id="Añadir" type="button" class="border-2 border-solid border-purple-900 :outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Añadir Tarea</button>
+        </form>
+      </div>
+    </div>
+    <!--Lista de tareas-->
+    <ul id="lista" class="flex flex-col gap-8 mt-8 left-0 right-0 md:w-2/4 w-full">
+      
+    </ul>
+  </main>
+  <footer>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </footer>
+</body>
+</html>
